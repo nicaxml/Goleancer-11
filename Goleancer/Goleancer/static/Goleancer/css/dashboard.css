@@ -1,0 +1,214 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0047a3;
+    --secondary-color: #0073e6;
+    --hover-color: #0057d9;
+    --text-color: #333;
+    --background-color: #f4f7fb;
+}
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+
+/* Navbar Toggler Styles */
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+}
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin: 6px auto;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-toggler-icon:hover {
+    background-color: var(--hover-color);
+}
+
+/* Navbar Collapse Styles */
+.navbar-collapse {
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 60px; /* Jarak dari header */
+    right: 0;
+    z-index: 1000;
+    width: auto; /* Hanya sebesar konten */
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+    transition: height 0.3s ease;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-color: var(--primary-color);
+    color: #005bb5;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.jumbotron h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.jumbotron p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.jumbotron .btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.jumbotron .btn-primary:hover {
+    background-color: var(--hover-color);
+}
+
+/* Main Content */
+main {
+    flex: 1;
+}
+
+/* Dashboard Item */
+.dashboard-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease;
+}
+
+.dashboard-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.dashboard-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.dashboard-item p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.dashboard-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dashboard-item a:hover {
+    text-decoration: underline;
+}
+
+.dashboard-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+/* Font Size Adjustment */
+.buttons {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.buttons .btn {
+    font-size: 18px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.buttons .btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Mengubah arah flex menjadi vertikal */
+        text-align: center; /* Agar menu berada di tengah */
+        padding: 20px 0;
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Jarak antar item di menu burger */
+    }
+
+    .navbar-toggler {
+        margin-left: 0; /* Posisi burger icon di tengah */
+    }
+
+    .navbar-collapse {
+        width: 250px; /* Atur lebar maksimal menu burger */
+        right: 10px; /* Posisi menu di kanan */
+    }
+
+    .navbar-toggler-icon {
+        margin: 0 auto; /* Agar burger icon di tengah */
+    }
+
+    .jumbotron {
+        margin-top: 100px; /* Jarak dari menu burger */
+    }
+}
